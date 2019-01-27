@@ -1,6 +1,6 @@
-import Migration from './migration';
+const Migration =  require('./migration');
 
-export default class CreateRightsDocument extends Migration {
+class CreatePermissionsDocument extends Migration {
     constructor() {
         super();
 
@@ -11,3 +11,5 @@ export default class CreateRightsDocument extends Migration {
         }
     }
 }
+
+module.exports = CreatePermissionsDocument;

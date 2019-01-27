@@ -1,6 +1,6 @@
-import Migration from './migration';
+const Migration =  require('./migration');
 
-export default class CreateClientsDocument extends Migration {
+class CreateMigrationsDocument extends Migration {
     constructor() {
         super();
         this.document = 'migrations';
@@ -16,3 +16,5 @@ export default class CreateClientsDocument extends Migration {
 
     };
 }
+
+module.exports = CreateMigrationsDocument;

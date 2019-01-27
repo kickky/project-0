@@ -1,6 +1,6 @@
-import Migration from './migration.mjs';
+import Migration from './migration';
 
-export default class CreateProductsDocument extends Migration {
+class CreateProductsDocument extends Migration {
     constructor() {
         super();
 
@@ -22,3 +22,5 @@ export default class CreateProductsDocument extends Migration {
         }
     }
 }
+
+module.exports = CreateProductsDocument;

@@ -1,6 +1,6 @@
-import Migration from './migration.mjs';
+import Migration from './migration';
 
-export default class CreateSettlementsDocument extends Migration {
+class CreateSettlementsDocument extends Migration {
     constructor() {
         super();
 
@@ -10,3 +10,5 @@ export default class CreateSettlementsDocument extends Migration {
         }
     }
 }
+
+module.exports = CreateSettlementsDocument;

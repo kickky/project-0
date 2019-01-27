@@ -1,6 +1,6 @@
-import Migration from './migration';
+const Migration =  require('./migration');
 
-export default class CreateRolesDocument extends Migration {
+class CreateRolesDocument extends Migration {
     constructor() {
         super();
         this.document = 'roles';
@@ -15,3 +15,5 @@ export default class CreateRolesDocument extends Migration {
 
     };
 }
+
+module.exports = CreateRolesDocument;

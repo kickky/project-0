@@ -1,6 +1,6 @@
-import Migration from './migration.mjs';
+import Migration from './migration';
 
-export default class CreateClientsDocument extends Migration {
+class CreateClientsDocument extends Migration {
     constructor() {
         super();
         this.table = 'clients';
@@ -19,3 +19,5 @@ export default class CreateClientsDocument extends Migration {
 
     };
 }
+
+module.exports = CreateClientsDocument;

@@ -1,6 +1,6 @@
-import Migration from './migration.mjs';
+import Migration from './migration';
 
-export default class CreateInvoicesDocument extends Migration {
+class CreateInvoicesDocument extends Migration {
     constructor() {
         super();
 
@@ -20,3 +20,5 @@ export default class CreateInvoicesDocument extends Migration {
         }
     }
 }
+
+module.exports = CreateInvoicesDocument;

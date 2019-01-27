@@ -1,4 +1,4 @@
-export default class Migration {
+class Migration {
     constructor() {
 
     }
@@ -21,3 +21,4 @@ export default class Migration {
 
     }
 }
+module.exports = Migration;

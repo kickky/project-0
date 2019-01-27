@@ -1,6 +1,7 @@
-import Migration from './migration';
+const Migration = require('./migration');
 
-export default class CreateUsersDocument extends Migration {
+
+class CreateUsersDocument extends Migration {
     constructor() {
         super();
         this.document = 'users';
@@ -12,10 +13,14 @@ export default class CreateUsersDocument extends Migration {
             password: 'string'
         }
     };
-    up(){
+
+    up() {
 
     };
-    down(){
+
+    down() {
 
     };
 }
+
+module.exports = CreateUsersDocument;
