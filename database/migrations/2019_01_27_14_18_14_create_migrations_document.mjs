@@ -1,4 +1,4 @@
-import Migration from './mirgation';
+import Migration from './migration';
 
 export default class CreateClientsDocument extends Migration {
     constructor() {

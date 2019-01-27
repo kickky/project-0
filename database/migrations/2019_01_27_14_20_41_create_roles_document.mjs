@@ -1,4 +1,4 @@
-import Migration from './mirgation';
+import Migration from './migration';
 
 export default class CreateRolesDocument extends Migration {
     constructor() {
