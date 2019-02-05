@@ -1,4 +1,13 @@
 const path = require('path');
+var mongoose = require('mongoose');
+const settings = require('./../_settings');
+
+mongoose.connect(`mongodb://${settings.db.host + ':' + settings.db.port + '/' + settings.db.name}`, {useNewUrlParser: true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+    console.log("database connected!")
+});
 
 const feathers = require('@feathersjs/feathers');
 const express = require('@feathersjs/express');
@@ -12,7 +21,7 @@ app.use(express.static(path.resolve(__projectdir, 'public')));
 // Turn on JSON body parsing for REST services
 app.use(express.json())
 // Turn on URL-encoded body parsing for REST services
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 // Set up REST transport using Express
 app.configure(express.rest());
 // Configure the Socket.io transport

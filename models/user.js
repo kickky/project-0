@@ -1,4 +1,5 @@
 const Model = require('./model');
+const mongoose = require('mongoose');
 
 /**
  * Class user
