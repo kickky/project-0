@@ -1,4 +1,4 @@
-const Model = require('./model');
+const Model = require('./_Model');
 
 class Client extends Model {
     constructor() {

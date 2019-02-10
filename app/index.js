@@ -1,13 +1,7 @@
 const path = require('path');
-var mongoose = require('mongoose');
-const settings = require('./../_settings');
+require('../includes/helpers');
+const AgentAppClass = require('./App');
 
-mongoose.connect(`mongodb://${settings.db.host + ':' + settings.db.port + '/' + settings.db.name}`, {useNewUrlParser: true});
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-    console.log("database connected!")
-});
 
 const feathers = require('@feathersjs/feathers');
 const express = require('@feathersjs/express');
@@ -28,6 +22,8 @@ app.configure(express.rest());
 app.configure(socketio());
 // Set up an error handler that gives us nicer errors
 app.use(express.errorHandler());
+
+new AgentAppClass(app);
 
 // Start the server on port 3030
 app.listen(3030);

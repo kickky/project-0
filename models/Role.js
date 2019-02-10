@@ -1,4 +1,4 @@
-const Model = require('./model');
+const Model = require('./_Model');
 
 class Role extends Model {
     constructor() {

@@ -1,5 +1,4 @@
-const Model = require('./model');
-const mongoose = require('mongoose');
+const Model = require('./_Model');
 
 /**
  * Class user
