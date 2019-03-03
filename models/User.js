@@ -1,13 +1,18 @@
-const Model = require('./_Model');
+const ModelFactory = require('./_ModelFactory');
+const Schema = require('mongoose').Schema;
 
 /**
  * Class user
  *
  */
-class User extends Model {
+class User extends ModelFactory {
+
     constructor() {
-        super();
+        let schema = new Schema({
+            fullName: String
+        });
+        super(schema);
     }
 }
 
-module.exports = User;
+module.exports = (new User).create();

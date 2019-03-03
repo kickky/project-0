@@ -10,7 +10,6 @@ class Main {
         this.products = new Product().all();
 
     }
-
 }
 
 module.exports = Main;

@@ -1,5 +1,5 @@
-const connection = require(resolvePath('database/connection'));
+const mongoose = require(resolvePath('database/connection'));
 
 module.exports = {
-    connection
+    mongoose
 };

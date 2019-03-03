@@ -1,7 +1,12 @@
-const Model = require('./_Model');
-class Invoice extends Model {
+const ModelFactory = require('./_ModelFactory');
+const Schema = require('mongoose').Schema;
+
+class Invoice extends ModelFactory {
     constructor() {
-        super();
+        let schema = new Schema({
+            name: String
+        });
+        super(schema);
     }
 }
 module.exports = Invoice;

@@ -1,14 +1,9 @@
 const path = require('path');
 
-const settings = require('./_settings');
-
-
-
 global.__projectdir = path.resolve(__dirname);
 
-global.config = (key) => {
-    if (settings[key]) {
-        return settings[key];
-    }
-    return null;
-};
+require(path.resolve(__dirname, 'includes', 'helper_functions'));
+
+if(env('NODE_ENV').toLowerCase() === 'test') {
+    require(path.resolve(__dirname, 'includes', 'helper_test_mode_functions'));
+}

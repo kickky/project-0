@@ -1,8 +1,12 @@
-const Model = require('./_Model');
+const ModelFactory = require('./_ModelFactory');
+const Schema = require('mongoose').Schema;
 
-class Settlement extends Model {
+class Settlement extends ModelFactory {
     constructor() {
-        super();
+        let schema = new Schema({
+            name: String
+        });
+        super(schema);
     }
 }
 

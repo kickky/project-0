@@ -1,5 +1,4 @@
 const path = require('path');
-require('../includes/helpers');
 const AgentAppClass = require('./App');
 
 
@@ -13,7 +12,7 @@ const app = express(feathers());
 
 app.use(express.static(path.resolve(__projectdir, 'public')));
 // Turn on JSON body parsing for REST services
-app.use(express.json())
+app.use(express.json());
 // Turn on URL-encoded body parsing for REST services
 app.use(express.urlencoded({extended: true}));
 // Set up REST transport using Express
